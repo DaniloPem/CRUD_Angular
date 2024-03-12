@@ -6,6 +6,10 @@ mat-card {
 
 mat-card-actions {
   justify-content: center;
+
+  button {
+    margin-right: 2em;
+  }
 }
 
 .full-width {

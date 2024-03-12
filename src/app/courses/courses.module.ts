@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [CoursesComponent, CourseFormComponent],
@@ -29,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule,
   ],
 })
 export class CoursesModule {}
