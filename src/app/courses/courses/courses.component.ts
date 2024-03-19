@@ -16,7 +16,7 @@ export class CoursesComponent implements OnInit {
   constructor(
     private coursesService: CoursesService,
     private router: Router,
-    private ActivatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ) {
     this.courses$ = this.coursesService.list().pipe(
       catchError((error) => {
@@ -28,6 +28,12 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {}
 
   onAdd() {
-    this.router.navigate(['new'], { relativeTo: this.ActivatedRoute });
+    this.router.navigate(['new'], { relativeTo: this.activatedRoute });
+  }
+
+  onEdit(course: Course) {
+    this.router.navigate(['edit', course._id], {
+      relativeTo: this.activatedRoute,
+    });
   }
 }
